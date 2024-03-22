@@ -9,25 +9,30 @@
 <body>
     <div class="container">
         <form >
-
+            <h2>Send message:</h2>
             <div class="input-group">
                 <label for="full-name">Full Name</label>
                 <input id="full-name" type="text" placeholder="Enter your name">
+                <span id="name-error">name is required</span>
             </div>
             <div class="input-group">
                 <label for="number">Phone Number</label>
                 <input id="number" type="tel" placeholder="99 777 88 99">
+                <span id="phone-error">phone is required</span>
             </div>
             <div class="input-group">
                 <label for="email">Email address</label>
                 <input id="email" type="email" placeholder="Email address">
+                <span id="email-error">email is required</span>
             </div>
             <div class="input-group">
                 <label for="message">Your message</label>
-                <textarea id="message" rows="5" placeholder="Your message">
+                <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                <span id="message-error">message is required</span>
             </div>
 
             <button>Submit</button>
+            <span id="submit-error">plese fix error</span>
         </form>
     </div>
 
