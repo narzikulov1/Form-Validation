@@ -1,5 +1,3 @@
-let submitError = document.getElementById("submit-error");
-
 // validation name
 let nameError = document.getElementById("name-error");
 
@@ -79,4 +77,16 @@ function validateMessage(){
     }
     messageError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`
     return true;
+}
+
+// submit validation
+let submitError = document.getElementById("submit-error");
+
+function validateForm(){
+    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage()){
+        submitError.style.display = "block";
+        submitError.innerHTML = "Please fix error to sumbit!"
+        setTimeout(function(){submitError.style.display = "none";}, 3000);
+        return false;
+    }
 }

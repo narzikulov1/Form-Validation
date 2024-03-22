@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,38 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/c16adbaa4b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container">
-        <form >
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="a3e14312-b6d6-40a4-a1d5-cb0ac60a97ce">
             <h2>Send message:</h2>
             <div class="input-group">
                 <label for="full-name">Full Name</label>
-                <input id="full-name" onkeyup="validateName()" type="text" placeholder="Enter your name">
+                <input id="full-name" onkeyup="validateName()" name="Fullname" type="text"
+                    placeholder="Enter your name">
                 <span id="name-error"></span>
             </div>
             <div class="input-group">
                 <label for="phone-number">Phone Number</label>
-                <input id="phone-number" maxlength="9" onkeyup="validatePhone()" type="tel" placeholder="99 777 88 99">
+                <input id="phone-number" maxlength="9" onkeyup="validatePhone()" name="Phone number" type="tel"
+                    placeholder="99 777 88 99">
                 <span id="phone-error"></span>
             </div>
             <div class="input-group">
                 <label for="email">Email address</label>
-                <input id="email" onkeyup="validateEmail()" type="email" placeholder="Email address">
+                <input id="email" onkeyup="validateEmail()" type="email" name="Email Address"
+                    placeholder="Email address">
                 <span id="email-error"></span>
             </div>
             <div class="input-group">
                 <label for="message">Your message</label>
-                <textarea id="message" onkeyup="validateMessage()" rows="5" placeholder="Your message"></textarea>
+                <textarea id="message" onkeyup="validateMessage()" rows="5" name="message"
+                    placeholder="Your message"></textarea>
                 <span id="message-error"></span>
             </div>
 
-            <button>Submit</button>
+            <button onclick="return validateForm()">Submit</button>
             <span id="submit-error"></span>
         </form>
     </div>
@@ -40,4 +47,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
