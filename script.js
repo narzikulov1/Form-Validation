@@ -1,4 +1,3 @@
-let messageError = document.getElementById("message-error");
 let submitError = document.getElementById("submit-error");
 
 // validation name
@@ -63,5 +62,21 @@ function validateEmail(){
     }
 
     emailError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`
+    return true;
+}
+
+
+// validation textarea valid 30 letter
+let messageError = document.getElementById("message-error");
+
+function validateMessage(){
+    let message = document.getElementById("message").value;
+    let required = 30;
+    let left = required - message.length;
+    if(left > 0){
+        messageError.innerHTML = left + " more charecters required";
+        return false;
+    }
+    messageError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`
     return true;
 }
