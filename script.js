@@ -1,5 +1,3 @@
-
-let emailError = document.getElementById("email-error");
 let messageError = document.getElementById("message-error");
 let submitError = document.getElementById("submit-error");
 
@@ -44,5 +42,26 @@ function validatePhone() {
     }
 
     phoneError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`
+    return true;
+}
+
+
+// validation email
+let emailError = document.getElementById("email-error");
+
+function validateEmail(){
+    let email = document.getElementById("email").value;
+
+    if (email.length == 0) {
+        emailError.innerHTML = "Email is required";
+        return false;
+    }
+
+    if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+        emailError.innerHTML = "Email invalid";
+        return false;
+    }
+
+    emailError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`
     return true;
 }
