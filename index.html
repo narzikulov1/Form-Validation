@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/c16adbaa4b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -12,27 +13,27 @@
             <h2>Send message:</h2>
             <div class="input-group">
                 <label for="full-name">Full Name</label>
-                <input id="full-name" type="text" placeholder="Enter your name">
-                <span id="name-error">name is required</span>
+                <input id="full-name" onkeyup="validateName()" type="text" placeholder="Enter your name">
+                <span id="name-error"></span>
             </div>
             <div class="input-group">
                 <label for="number">Phone Number</label>
                 <input id="number" type="tel" placeholder="99 777 88 99">
-                <span id="phone-error">phone is required</span>
+                <span id="phone-error"></span>
             </div>
             <div class="input-group">
                 <label for="email">Email address</label>
                 <input id="email" type="email" placeholder="Email address">
-                <span id="email-error">email is required</span>
+                <span id="email-error"></span>
             </div>
             <div class="input-group">
                 <label for="message">Your message</label>
                 <textarea id="message" rows="5" placeholder="Your message"></textarea>
-                <span id="message-error">message is required</span>
+                <span id="message-error"></span>
             </div>
 
             <button>Submit</button>
-            <span id="submit-error">plese fix error</span>
+            <span id="submit-error"></span>
         </form>
     </div>
 
